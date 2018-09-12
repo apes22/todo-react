@@ -174,7 +174,7 @@ var app = app || {};
             {main}
             {newTodo}
             <button className="primary-btn" onClick={this.handleAddTask}>
-              Add Task
+              + Add Task
             </button>
           </header>
 
