@@ -21,6 +21,7 @@ var app = app || {};
       return {
         nowShowing: app.ALL_TODOS,
         editing: null,
+        addingTodo: false,
         newTodo: ""
       };
     },
@@ -50,8 +51,12 @@ var app = app || {};
 
       if (val) {
         this.props.model.addTodo(val);
-        this.setState({ newTodo: "" });
+        this.setState({ newTodo: "", addingTodo: false });
       }
+    },
+
+    handleAddTask: function() {
+      this.setState({ addingTodo: true });
     },
 
     toggleAll: function(event) {
@@ -87,6 +92,7 @@ var app = app || {};
     render: function() {
       var footer;
       var main;
+      var newTodo;
       var todos = this.props.model.todos;
 
       var shownTodos = todos.filter(function(todo) {
@@ -148,20 +154,30 @@ var app = app || {};
         );
       }
 
+      if (this.state.addingTodo) {
+        newTodo = (
+          <input
+            className="new-todo"
+            placeholder="What needs to be done?"
+            value={this.state.newTodo}
+            onKeyDown={this.handleNewTodoKeyDown}
+            onChange={this.handleChange}
+            autoFocus={true}
+          />
+        );
+      }
+
       return (
         <div>
           <header className="header">
             <h1>to do:</h1>
-            <input
-              className="new-todo"
-              placeholder="What needs to be done?"
-              value={this.state.newTodo}
-              onKeyDown={this.handleNewTodoKeyDown}
-              onChange={this.handleChange}
-              autoFocus={true}
-            />
+            {main}
+            {newTodo}
+            <button className="primary-btn" onClick={this.handleAddTask}>
+              Add Task
+            </button>
           </header>
-          {main}
+
           {footer}
         </div>
       );
