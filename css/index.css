@@ -42,10 +42,10 @@ body {
 }
 
 .todoapp {
-  background: #f5f5f5;
+  background: #f6f6f8;
   margin: 130px 0 40px 0;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .todoapp input::-webkit-input-placeholder {
