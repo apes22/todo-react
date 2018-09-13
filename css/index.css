@@ -312,12 +312,15 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding: 10px 0;
   right: 0;
   left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.filters li {
+  padding-top: 20px;
 }
 
 .filters li a {
