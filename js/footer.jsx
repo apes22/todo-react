@@ -16,6 +16,7 @@ var app = app || {};
       var nowShowing = this.props.nowShowing;
       return (
         <footer className="footer">
+          <h2>show:</h2>
           <ul className="filters">
             <li>
               <a

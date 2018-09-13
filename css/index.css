@@ -26,7 +26,7 @@ button {
   font-size: 120%;
   letter-spacing: 4px;
   border-radius: 10px;
-  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 100%;
   color: #ffffff;
@@ -64,7 +64,7 @@ body {
   background: #f6f6f8;
   margin: 130px 0 40px 0;
   position: relative;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 30px 16px 30px 16px;
 }
 .todoapp input {
@@ -93,13 +93,18 @@ body {
   width: 100%;
   font-size: 24px;
   font-weight: 550;
-  text-align: left;
-  color: #000000;
-  letter-spacing: 4px;
+
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
+}
+
+.todoapp h1,
+.footer h2 {
   text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000000;
+  text-align: left;
 }
 
 .new-todo,
@@ -158,9 +163,6 @@ body {
   font-size: 22px;
   color: #e6e6e6;
   padding: 10px 27px 10px 27px;
-}
-
-.toggle-all:checked + label:before {
 }
 
 .todo-list {
@@ -278,9 +280,7 @@ body {
 }
 
 .footer {
-  color: #777;
-  padding: 10px 15px;
-  height: 20px;
+  min-height: 100px;
   text-align: center;
   border-top: 1px solid #e6e6e6;
 }
@@ -293,9 +293,10 @@ body {
   left: 0;
   height: 50px;
   overflow: hidden;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
-    0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6,
-    0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.footer h2 {
+  font-size: 16px;
 }
 
 .todo-count {
@@ -311,30 +312,42 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
+  padding: 10px 0;
   right: 0;
   left: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filters li {
-  display: inline;
 }
 
 .filters li a {
-  color: inherit;
+  color: #52697d;
+  background-color: #ffffff;
   margin: 3px;
-  padding: 3px 7px;
+  padding: 7px 15px;
   text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  border: 2px solid #52697d;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  text-transform: uppercase;
 }
 
 .filters li a:hover {
-  border-color: rgba(175, 47, 47, 0.1);
+  background-color: #6c8092;
+  color: white;
 }
 
 .filters li a.selected {
-  border-color: rgba(175, 47, 47, 0.2);
+  background-color: #52697d;
+  border: 1.5px solid #383636;
+  box-shadow: none;
+  box-shadow: inset 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .clear-completed,
