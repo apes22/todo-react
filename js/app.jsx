@@ -59,11 +59,6 @@ var app = app || {};
       this.setState({ addingTodo: true });
     },
 
-    toggleAll: function(event) {
-      var checked = event.target.checked;
-      this.props.model.toggleAll(checked);
-    },
-
     toggle: function(todoToToggle) {
       this.props.model.toggle(todoToToggle);
     },
@@ -128,27 +123,12 @@ var app = app || {};
       var completedCount = todos.length - activeTodoCount;
 
       if (activeTodoCount || completedCount) {
-        footer = (
-          <TodoFooter
-            count={activeTodoCount}
-            completedCount={completedCount}
-            nowShowing={this.state.nowShowing}
-            onClearCompleted={this.clearCompleted}
-          />
-        );
+        footer = <TodoFooter nowShowing={this.state.nowShowing} />;
       }
 
       if (todos.length) {
         main = (
           <section className="main">
-            <input
-              id="toggle-all"
-              className="toggle-all"
-              type="checkbox"
-              onChange={this.toggleAll}
-              checked={activeTodoCount === 0}
-            />
-            <label htmlFor="toggle-all" />
             <ul className="todo-list">{todoItems}</ul>
           </section>
         );
