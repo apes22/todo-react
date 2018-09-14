@@ -33,6 +33,7 @@ button {
   background: #14a8a2;
   font-weight: bold;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 
 .primary-btn:hover {
@@ -151,6 +152,18 @@ body {
   font-weight: 550;
   color: #14a8a2;
   border-bottom: 1px solid #ededed;
+  animation: fadeIn 0.5s ease-in both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .todo-list li:last-child {
@@ -306,6 +319,7 @@ body {
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 
 .filters li a:hover {
