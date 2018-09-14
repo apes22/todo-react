@@ -10,11 +10,15 @@ Original Design:
      <img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_400/v1536886432/Original_Todo.png"> 
   </kbd>
   
+  
+  
+  
 Updated Design:
 
   <kbd>
      <img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_400/v1536886421/Redesigned_Todo.png"> 
   </kbd>
+  
 
 ## To Run Project Locally
 
@@ -35,3 +39,6 @@ Enjoy! :blue_heart:
 
 
 ## TODOs
+
+- [ ] Rebuild as a fullstack app with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) + [Firebase](https://firebase.google.com/).
+
