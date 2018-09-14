@@ -7,13 +7,13 @@ This is a redesign of the [todoMVC's React Todo App](http://todomvc.com/examples
 Original Design:
 
   <kbd>
-     <img src=""> 
+     <img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_400/v1536886432/Original_Todo.png"> 
   </kbd>
   
 Updated Design:
 
   <kbd>
-     <img src=""> 
+     <img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_400/v1536886421/Redesigned_Todo.png"> 
   </kbd>
 
 ## To Run Project Locally
